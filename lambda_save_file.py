@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 def lambda_handler(event, context):
-    # TODO implement
+    # TODO implement your code here
 
     s3 = boto3.client("s3")
 
@@ -13,7 +13,7 @@ def lambda_handler(event, context):
 
     s3.put_object(
         Body=message,
-        Bucket="seu_bucket",
+        Bucket="bucket-name",
         Key=f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}.txt",
     )
 
