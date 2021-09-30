@@ -13,7 +13,7 @@ def lambda_handler(event, context):
 
     s3.put_object(
         Body=message,
-        Bucket="bucket-name",
+        Bucket="nome-do-bucket",
         Key=f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}.txt",
     )
 
